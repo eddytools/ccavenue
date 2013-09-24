@@ -1,13 +1,28 @@
 <?php
-
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ 
 /**
- * Adds new instance of enrol_ccavenue to specified course
- * or edits current instance.
+ * CCAvenue India (payment) enrolment plugin .
  *
  * @package    enrol_ccavenue
- * @copyright  2010 EddyTools(TM)  
- * @web : www.eddytools.com
+ * @copyright  2010 EddyTools(TM) Anwesha Software Pvt. Ltd
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -23,7 +38,7 @@ class enrol_ccavenue_edit_form extends moodleform {
 
         $mform->addElement('header', 'header', get_string('pluginname', 'enrol_ccavenue'));
 
-        $mform->addElement('text', 'merchantId', get_string('custominstancename', 'enrol_ccavenue'));
+        $mform->addElement('text', 'merchantId', get_string('merchantId', 'enrol_ccavenue'));
         $mform->setType('merchantId', PARAM_TEXT);
         $mform->setDefault('merchantId', $plugin->get_config('merchantId'));
         
