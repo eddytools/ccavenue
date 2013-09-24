@@ -1,0 +1,18 @@
+<div align="center">
+<p><?php print_string("paymentrequired") ?></p>
+<p><b><?php echo $instancename; ?></b></p>
+<p><b><?php echo get_string("cost").": {$instance->currency} {$localisedcost}"; ?></b></p>
+<p><img alt="<?php print_string('ccavenueaccepted', 'enrol_ccavenue') ?>" src="http://www.ccavenue.com/images/ccav_secure_banner.gif" /></p>
+<p><?php print_string("paymentinstant") ?></p>
+
+<form action="<?=$ccavenueurl?>" method="post">
+	<input type=hidden name=Merchant_Id value="<?=$Merchant_Id?>">
+	<input type=hidden name=Amount value="<?=$Amount?>">
+	<input type=hidden name=Order_Id value="<?=$Order_Id?>" />
+	<input type=hidden name=Redirect_Url value="<?=$Redirect_Url?>" />
+	<input type=hidden name=Checksum value="<?=$Checksum?>">
+	<input type="hidden" name="Merchant_Param" value="<?=$Merchant_Param;?>"> 
+        <input type="submit" value="<?php print_string("sendpaymentbutton", "enrol_ccavenue"); ?>" />
+</form>
+</div>
+
